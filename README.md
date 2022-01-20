@@ -103,31 +103,31 @@ class Product {
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 
-<project name="MyProject.doc" default="create-javadoc" basedir=".">
+<project name="MyProject.doc" default="create-javadoc" basedir="../../../../../..">
 
     <target name="create-javadoc" description="documentation" depends="">
-        <property name="app.name"    value="MyProject" />
-        <property name="app.version" value="1.21" />
-        <property name="app.author"  value="AuthorName" />
-        <property name="app.year"    value="2015" />
-        <property name="dir.package" value="examples.projects.*" />
-        <property name="dir.src"     value="./src" />
-        <property name="dir.doc"     value="./doc" />
+        <property name="app.name" value="MyProject"/>
+        <property name="app.version" value="1.21"/>
+        <property name="app.author" value="AuthorName"/>
+        <property name="app.year" value="2015"/>
+        <property name="dir.package" value="examples.projects.*"/>
+        <property name="dir.src" value="./src"/>
+        <property name="dir.doc" value="./doc"/>
 
-        <echo message="Create MyProject.doc." />
-        <mkdir dir="${dir.doc}" />
+        <echo message="Create MyProject.doc."/>
+        <mkdir dir="${dir.doc}"/>
 
-        <javadoc destdir="${dir.doc}" 
+        <javadoc destdir="${dir.doc}"
                  use="true"
                  private="true"
-                 author="${app.author}" 
-                 version="${app.version}" 
+                 author="${app.author}"
+                 version="${app.version}"
                  windowtitle="${app.name} API"
-                 doctitle="${app.name}" >
+                 doctitle="${app.name}">
             <fileset dir="${dir.src}" defaultexcludes="yes">
-                 <include name="examples/projects/**"/>
+                <include name="examples/projects/**"/>
             </fileset>
-	    </javadoc>
+        </javadoc>
     </target>
 </project>
 ```
