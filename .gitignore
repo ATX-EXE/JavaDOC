@@ -86,6 +86,6 @@ nb-configuration.xml
 ##############################
 ##
 ##############################
-misc.xml
+.idea/misc.xml
 modules.xml
 workspace.xml
